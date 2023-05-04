@@ -48,7 +48,7 @@ export const AuthContextProvider = ({children}: Props) => {
     try {
       const auth = await authService.signIn(email, password);
       setAuth(auth)
-      console.log(auth)
+      // console.log(auth)
       AsyncStorage.setItem('@AuthData', convertToString(auth));
       return auth;
 

@@ -2,7 +2,7 @@ import React from "react";
 import * as S from './styles'
 import TitleLogin from "../../components/TitleLogin/TitleLogin";
 import MyButton from "../../components/MyButton/MyButton";
-import useAuth from "../../hooks/useAuth";
+import { useAuth } from "../../hooks/useAuth";
 
 export default function SettingScreen() {
   const { signOut } = useAuth();
