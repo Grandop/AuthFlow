@@ -3,7 +3,7 @@ import * as S from './styles'
 import MyTextField from "../../components/TextFields/TextFields";
 import MyButton from "../../components/MyButton/MyButton";
 import TitleLogin from "../../components/TitleLogin/TitleLogin";
-import useAuth from "../../hooks/useAuth";
+import { useAuth } from "../../hooks/useAuth";
 import { ThemeContext, TypeTheme } from "../../theme/Theme";
 import { Switch } from "react-native";
 import { Keyboard, TouchableWithoutFeedback } from 'react-native';
