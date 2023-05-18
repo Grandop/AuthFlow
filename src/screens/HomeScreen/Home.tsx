@@ -12,13 +12,6 @@ interface Nav {
 
 export default function Home() {
   const { navigate } = useNavigation<Nav>();
-  const { loading } = useAuth()
-
-  if(loading) {
-    return (
-      <Loader/>
-    );
-  }
 
   return (
     <S.ContainerView>
