@@ -14,17 +14,20 @@ const themes = {
   light: lightTheme,
 }
 
-export const ThemeContext = createContext({
+interface ThemeContextProps {
   theme: TypeTheme.light,
   toggleTheme: () => {},
-});
+}
+
+export const ThemeContext = createContext<ThemeContextProps>(
+  {} as ThemeContextProps);
 
 interface Props {
   children: React.ReactNode;
 }
 
 export const ThemeContextProvider = ({children}: Props) => {
-  const [theme, setTheme] = useState(TypeTheme.light);
+  const [theme, setTheme] = useState<TypeTheme>(TypeTheme.light);
 
   useEffect(() => {
     loadTheme()
