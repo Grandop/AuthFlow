@@ -45,14 +45,16 @@ export const AuthContextProvider = ({children}: Props) => {
   }
 
   const signIn = async (email: string, password: string): Promise<AuthData> => {
+    setLoading(true)
     try {
       const auth = await authService.signIn(email, password);
       setAuth(auth)
-      // console.log(auth)
       AsyncStorage.setItem('@AuthData', convertToString(auth));
+      setLoading(false)
       return auth;
 
     } catch (error) {
+      setLoading(false)
       Alert.alert(error.message, 'tente novamente')
     }
   } 

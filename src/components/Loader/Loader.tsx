@@ -1,11 +1,12 @@
 import React from 'react';
 import { View, ActivityIndicator } from 'react-native';
+import * as S from './styles';
 
 export const Loader = () => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <ActivityIndicator size="large" color="#550ab1" />
-    </View>
+    <S.LoaderContainer>
+      <S.Loader size="large" color="#FFF" />
+    </S.LoaderContainer>
   );
 };
 

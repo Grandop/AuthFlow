@@ -3,6 +3,8 @@ import * as S from './styles'
 import TitleHome from "../../components/TitleHome/TitleHome";
 import MyButton from "../../components/MyButton/MyButton";
 import { useNavigation } from "@react-navigation/native";
+import { useAuth } from "../../hooks/useAuth";
+import Loader from "../../components/Loader/Loader";
 
 interface Nav {
   navigate: (value: string) => Event;
@@ -10,6 +12,13 @@ interface Nav {
 
 export default function Home() {
   const { navigate } = useNavigation<Nav>();
+  const { loading } = useAuth()
+
+  if(loading) {
+    return (
+      <Loader/>
+    );
+  }
 
   return (
     <S.ContainerView>

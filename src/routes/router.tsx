@@ -3,7 +3,6 @@ import { NavigationContainer } from "@react-navigation/native";
 import AppStack from "./AppStack";
 import AuthStack from "./AuthStack";
 import { useAuth } from "../hooks/useAuth";
-import { Text, View } from "react-native";
 import Loader from "../components/Loader/Loader";
 
 
