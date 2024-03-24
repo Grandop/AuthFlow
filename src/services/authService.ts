@@ -6,7 +6,7 @@ async function signIn(email: string, password: string): Promise<AuthData> {
     setTimeout(() => {
       if(password === '123456')  {
         resolve({
-          token: 'fake-token',
+          token: 'fake-token-123',
           email,
           name: 'Pedro Grando' 
         })
